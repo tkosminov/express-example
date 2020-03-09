@@ -1,0 +1,30 @@
+{
+  "APP_SETTINGS": {
+    "port": 8080,
+    "body_size_limit": "50mb",
+    "body_parameter_limit": 50000
+  },
+  "LOGGER_SETTINGS": {
+    "level": "info",
+    "silence": [
+      "/healthz"
+    ]
+  },
+  "DB_SETTINGS": {
+    "host": "mongodb://localhost/express_example",
+    "options": {
+      "useNewUrlParser": true,
+      "useUnifiedTopology": true,
+      "useCreateIndex": true
+    }
+  }, 
+  "AUTH_SETTINGS": {
+    "jwtLifeTime": 15,
+    "jwtSecret": "secret",
+    "notCheck": ["auth", "healthz"]
+  },
+  "CORS_SETTINGS": {
+    "allowedCredentials": true,
+    "allowedOrigins": []
+  }
+}
